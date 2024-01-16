@@ -1,0 +1,79 @@
+@mixin title-h {
+    color: var(--Secondary-Clor, #FFF);
+    font-family: Space Grotesk;
+    margin-top: 40px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+@mixin description-p {
+    color: var(--Sub-Body-Text-Clor, #DCE7F1);
+    font-family: Space Grotesk;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    margin: 20px;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .card-text {
+        padding: 20px;
+        border-radius: 0 0 10px 10px;
+        background: var(--Linear-01, linear-gradient(180deg, rgba(0, 31, 63, 0.00) 0%, rgba(0, 31, 63, 0.97) 100%));
+        box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.10);
+        transition: opacity 0.3s;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+
+        .title {
+            @include title-h()
+        }
+
+        .description {
+            @include description-p()
+        }
+
+        .card-icon2 {
+            position: absolute;
+            bottom: 60px;
+        }
+    }
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover .card-text {
+    opacity: 1;
+}

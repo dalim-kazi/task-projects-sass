@@ -1,0 +1,9 @@
+@mixin title-para ($color, $margin-bottom, $font-family, $font-size, $font-style, $font-weight, $line-height) {
+    color: $color;
+    margin-bottom: $margin-bottom;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}

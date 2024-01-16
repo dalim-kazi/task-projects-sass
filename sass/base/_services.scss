@@ -1,0 +1,38 @@
+.Services-section {
+  background-image: url("../../image/bannar.png"), linear-gradient(lightgray 0px, lightgray -477.175px, lightgray 270.725%);
+  background-size: 100% 100%, 100% 270.725%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 0 -477.175px;
+  height: 400px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+
+  .Services {
+    color: #FFF;
+    font-family: Space Grotesk;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100px;
+    position: relative;
+    left: 18%;
+  }
+
+  .Home-Services {
+    margin-top: 200px;
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    p {
+      color:#FFF;
+      font-family: Space Grotesk;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 30px;
+    }
+  }
+}

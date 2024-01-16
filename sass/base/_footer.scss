@@ -1,0 +1,106 @@
+ @use "../utils/index" as index;
+
+ .footer-container {
+     background: #001F3F;
+
+     .footer-header {
+         display: flex;
+         justify-content: space-around;
+         border-bottom: #FFF;
+         border-bottom: 1px solid #27435F;
+
+         .title {
+             @include index.title-para(#FFF, -bottom, Space Grotesk, 30px, normal, 700, 40px);
+         }
+
+         .Subscription {
+             @include index.title-para(#FFF, 10px, Space Grotesk, 16px, normal, 500, 26px);
+             text-transform: uppercase;
+         }
+
+         .input-content {
+             position: relative;
+
+             .input-field {
+                 width: 270px;
+                 height: 40px;
+                 flex-shrink: 0;
+                 border-radius: 50px;
+                 background: #FFF;
+                 padding: 0 20px;
+                 color: black;
+                 border: #FF5A30;
+
+                 &:focus {
+                     border: none;
+                     outline: none;
+                 }
+             }
+
+
+
+             .Subscribe {
+                 position: absolute;
+                 right: 5%;
+                 top: 20%;
+                 @include index.title-para(#FF5A30, -bottom, Space Grotesk, 16px, normal, 700, 26px);
+                 cursor: pointer;
+             }
+         }
+
+     }
+
+     .footer-nav-list {
+         display: flex;
+         justify-content: space-around;
+         margin-top: 20px;
+         border-bottom: 1px solid #27435F;
+
+         .footer-logo {
+             display: flex;
+             align-items: center;
+             gap: 20px;
+             margin-bottom: 20px;
+
+             h1 {
+                 @include index.title-para(#FFF, -bottom, Space Grotesk, 25px, normal, 700, 35px);
+                 text-transform: uppercase;
+             }
+         }
+
+         .footer-description {
+             @include index.title-para(#cfe1f3, 20px, Space Grotesk, 16px, normal, 400, 26px);
+         }
+     }
+
+     .nav-list {
+         @include index.title-para(#DCE7F1, 5px, Space Grotesk, 16px, normal, 400, 26px);
+
+         .title-p {
+             @include index.title-para(#FFF, 10px, Space Grotesk, 15px, normal, 700, 20px);
+         }
+
+     }
+
+     .title-icon {
+         .title-p {
+             @include index.title-para(#FFF, 10px, Space Grotesk, 15px, normal, 700, 20px);
+         }
+
+         .icon {
+             display: flex;
+             align-items: center;
+             gap: 10px;
+
+             p {
+                 @include index.title-para(#DCE7F1, 5px, Space Grotesk, 16px, normal, 400, 26px);
+             }
+         }
+     }
+ .Copyright-Term{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    @include index.title-para(#DCE7F1, 5px, Space Grotesk, 16px, normal, 400, 26px);
+ }
+ }

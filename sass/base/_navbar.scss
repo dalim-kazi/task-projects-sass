@@ -1,0 +1,201 @@
+@mixin title-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@mixin para-p {
+    color: #FFF;
+    font-family: Space Grotesk;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+@mixin details-p {
+    color: #FFF;
+    font-family: Space Grotesk;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+header {
+    padding: 40px 0px;
+    height: 100px;
+    background: #001F3F;
+    align-items: center;
+    position: relative;
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+
+        .header-title {
+            @include title-section();
+
+            p {
+                color: #FFF;
+                font-family: Space Grotesk;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 35px;
+                text-transform: uppercase;
+            }
+        }
+
+        .header-content {
+            display: flex;
+            gap: 20px;
+
+            .cell-section {
+                @include title-section();
+
+                .call {
+                    @include para-p()
+                }
+
+                .number {
+                    @include details-p()
+                }
+            }
+
+            .message-section {
+                @include title-section();
+                padding: 0 20px;
+
+                .message {
+                    @include para-p()
+                }
+
+                .website {
+                    @include details-p()
+                }
+            }
+
+            .Address-section {
+                @include title-section();
+
+                .Address {
+                    @include para-p()
+                }
+
+                .location {
+                    @include details-p()
+                }
+            }
+        }
+    }
+
+}
+
+.navbar-section {
+    position: absolute;
+    top: 17%;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    width:80%;
+    height: 114px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FF5A30;
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        list-style-type: none;
+
+        li a {
+            text-decoration: none;
+            color: #FFF;
+            font-family: Space Grotesk;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px;
+            text-transform: uppercase;
+            transition: color 0.3s ease,
+            transform 0.5s ease;
+        }
+
+        li a:hover {
+            color: #001F3F;
+            transform: scale(1.1);
+        }
+    }
+
+    .navbar-content {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding: 0 30px;
+        position: relative;
+
+        .input-field {
+            width: 270px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.10);
+            padding: 0 50px;
+            color: #FFF;
+            border: #FF5A30;
+        }
+
+        .input-field:focus {
+            border: none;
+            outline: none;
+        }
+
+        .input-field::placeholder {
+            color: #FFF;
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 38px;
+            padding-top: 11px;
+            padding-left: 16px;
+        }
+
+        .Teach {
+            color: #FFF;
+            font-family: Space Grotesk;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            transition: color 0.3s ease,
+                transform 0.5s ease;
+        }
+
+        .Teach:hover {
+            color: #001F3F;
+            animation: pulse 1s infinite;
+        }
+
+        /* Keyframes for Pulse Animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    }
+}
